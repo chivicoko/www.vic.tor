@@ -3,50 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tech Goals</title>
+    <title>My Tech Goals (VeeCee)</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header data-testid="header">
-        <h1>My Tech Goals</h1>
+        <h1>My Plans for the Next Two Years.</h1>
+        <div class="slack-info">
+            <p data-testid="slackDisplayName">Slack Display Name: VeeCee</p>
+            <p data-testid="slackEmail">Slack Email: victor.c.okoye@gmail.com</p>
     </header>
     
     <main data-testid="main-content">
         <section id="intro" data-testid="intro-section">
             <h2>Introduction</h2>
-            <p>Hello! I'm a junior web developer with big plans for the next two years. Below are my goals and the steps I will take to achieve them.</p>
-            <img src="images/victorImage.jpeg" alt="Victor's Tech Image" data-testid="intro-image">
+            <p>Hello! I'm a web developer with big plans for the next two years. Below are my goals and the steps I will take to achieve them.</p>
+            <img src="images/victorImage.jpeg" alt="Slack Profile Picture" data-testid="slackProfilePicture" class="profile-image" loading="lazy">
         </section>
         
+        <!-- Goals -->
         <section id="goals" data-testid="goals-section">
             <h2>My Goals</h2>
-            <ul>
-                <li data-testid="goal-1">Become proficient in React and Node.js</li>
-                <li data-testid="goal-2">Contribute to open source projects</li>
-                <li data-testid="goal-3">Build a personal portfolio website</li>
-                <li data-testid="goal-4">Get certified in AWS or Google Cloud</li>
-                <li data-testid="goal-5">Land a full-time job at a tech company</li>
-            </ul>
+            <div class="card-container">
+                <div class="card" data-testid="goal-1">
+                    <h3>Become proficient in React and Node.js</h3>
+                </div>
+                <div class="card" data-testid="goal-2">
+                    <h3>Contribute to open source projects</h3>
+                </div>
+                <div class="card" data-testid="goal-3">
+                    <h3>Update my personal portfolio website</h3>
+                </div>
+                <div class="card" data-testid="goal-4">
+                    <h3>Get certified in AWS or Google Cloud</h3>
+                </div>
+                <div class="card" data-testid="goal-5">
+                    <h3>Land a full-time job at a tech company</h3>
+                </div>
+            </div>
         </section>
         
+        <!-- Plan -->
         <section id="plan" data-testid="plan-section">
             <h2>Plan to Achieve Goals</h2>
-            <p>Here are the steps I will take:</p>
-            <ol>
-                <li data-testid="step-1">Complete online courses and tutorials on React and Node.js</li>
-                <li data-testid="step-2">Participate in coding bootcamps and hackathons</li>
-                <li data-testid="step-3">Contribute to GitHub projects and seek mentorship</li>
-                <li data-testid="step-4">Build and maintain my personal portfolio</li>
-                <li data-testid="step-5">Study for and pass AWS/Google Cloud certification exams</li>
-                <li data-testid="step-6">Apply for internships and junior developer positions</li>
-            </ol>
+            <div class="plan-container">
+                <div class="plan-text">
+                    <p>Here are the steps I will take:</p>
+                    <ol>
+                        <li data-testid="step-1">Complete online courses and tutorials on React and Node.js</li>
+                        <li data-testid="step-2">Participate in tech events and hackathons</li>
+                        <li data-testid="step-3">Contribute to GitHub projects and seek mentorship</li>
+                        <li data-testid="step-4">Build and maintain a better personal portfolio</li>
+                        <li data-testid="step-5">Study for and pass AWS/Google Cloud certification exams</li>
+                        <li data-testid="step-6">Apply for more internships and junior or intermediate developer positions</li>
+                    </ol>
+                </div>
+                <div class="plan-image">
+                    <img src="images/planImage.jpg" alt="Plan Image" data-testid="plan-image" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Favorite Quotes -->
+        <section id="quotes" data-testid="quotes-section">
+            <h2>Favorite Quotes</h2>
+            <div class="quote-container">
+                <div class="quote-card" data-testid="quote-1">
+                    <p>"The best way to predict the future is to invent it." - Alan Kay</p>
+                </div>
+                <div class="quote-card" data-testid="quote-2">
+                    <p>"Don't watch the clock; do what it does. Keep going." - Sam Levenson</p>
+                </div>
+                <div class="quote-card" data-testid="quote-3">
+                    <p>"The only limit to our realization of tomorrow is our doubts of today." - Franklin D. Roosevelt</p>
+                </div>
+            </div>
         </section>
     </main>
     
     <footer data-testid="footer">
-        <p>&copy; 2024 My Tech Journey</p>
+        <p>&copy; 2024 My Tech Goals (VeeCee) | Current Time in UTC: <span id="currentTimeUTC"></span> (<span id="currentDay"></span>)</p>
+
+        <div class="footer-links">
+            <a href="https://hng.tech/learn" target="_blank" data-testid="hngLink">Learn more about HNG</a>
+            <a href="https://keyword.dog" target="_blank" data-testid="keywordLink">Explore keyword.dog</a>
+            <a href="https://scrapeanyweb.site" target="_blank" data-testid="scrapeanywebLink">Visit Scrape Any Web</a>
+        </div>
     </footer>
-    
+
+    <!-- Dark mode toggler -->
+    <svg id="toggleDarkMode" class="dark-mode-toggle" viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"><rect x="-2.4" y="-2.4" width="28.80" height="28.80" rx="14.4" fill="#45a049" strokewidth="0"></rect></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9.00068 19.0001C9.00068 19.8401 9.13068 20.6601 9.37068 21.4201C5.53068 20.0901 2.63068 16.5601 2.33068 12.4301C2.03068 8.04012 4.56068 3.94012 8.65068 2.22012C9.71068 1.78012 10.2507 2.10012 10.4807 2.33012C10.7007 2.55012 11.0107 3.08012 10.5707 4.09012C10.1207 5.13012 9.90068 6.23012 9.90068 7.37012C9.91068 9.41012 10.7107 11.3001 12.0107 12.7501C10.1807 14.2101 9.00068 16.4701 9.00068 19.0001Z" fill="#292D32"></path> <path opacity="0.4" d="M21.21 17.72C19.23 20.41 16.09 21.99 12.74 21.99C12.58 21.99 12.42 21.98 12.26 21.97C11.26 21.93 10.29 21.74 9.37 21.42C9.13 20.66 9 19.84 9 19C9 16.47 10.18 14.21 12.01 12.75C13.48 14.4 15.59 15.47 17.92 15.57C18.55 15.6 19.18 15.55 19.8 15.44C20.92 15.24 21.37 15.66 21.53 15.93C21.7 16.2 21.88 16.79 21.21 17.72Z" fill="#292D32"></path> </g></svg>
+
     <script src="script.js"></script>
 </body>
 </html>
