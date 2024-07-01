@@ -1,5 +1,5 @@
+/* Default light mode colors */
 :root {
-    /* Default light mode colors */
     --background-color: #f0f0f0;
     --text-color: #333;
     --header-background-color: #4CAF50;
@@ -13,7 +13,7 @@
     --footer-link-color: #4CAF50;
 }
 
-/* dark */
+/* Dark mode colors */
 body.dark-mode {
     --background-color: #333;
     --text-color: #f0f0f0;
@@ -49,6 +49,10 @@ header {
     padding: 1em 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header h1 {
+    padding-inline: 5px;
 }
 
 .slack-info {
@@ -254,7 +258,13 @@ footer p {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) {    
+    .slack-info {
+        flex-direction: column;
+        gap: 0;
+        line-height: 1px;
+    }
+
     .card {
         width: 100%;
     }
