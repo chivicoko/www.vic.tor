@@ -219,7 +219,7 @@ footer p {
 }
 
 .profile-image {
-    border-radius: 50%;
+    border-radius: 10px;
     max-width: 100%;
     height: auto;
     transition: transform 0.3s ease;
