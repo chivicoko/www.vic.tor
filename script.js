@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleSwitch = document.getElementById('toggleDarkMode');
     const body = document.body;
     const currentTimeUTC = document.getElementById('currentTimeUTC');
-    const currentDayUTC = document.getElementById('currentDay');
+    const currentDay = document.getElementById('currentDay');
 
-    // Function to update current time and day
+    // Update current time and day
     function updateCurrentTimeAndDay() {
         const now = new Date();
         const hours = now.getUTCHours().toString().padStart(2, '0');
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dayOfWeek = days[now.getUTCDay()];
 
         currentTimeUTC.textContent = currentTime;
-        currentDayUTC.textContent = dayOfWeek;
+        currentDay.textContent = dayOfWeek;
     }
 
     updateCurrentTimeAndDay();
